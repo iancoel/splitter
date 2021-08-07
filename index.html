@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Splitter</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="title">
+      <p>Spli</p>
+      <p>tter</p>
+    </div>
+
+    <div class="content">
+      <div class="input">
+        <div class="bill">
+          <h2>Bill</h2>
+          <input type="number" placeholder="$" step="0.01">
+        </div>
+
+        <div class="tip">
+          <h2>Select Tip %</h2>
+          <ul>
+            <li><button>5%</button></li>
+            <li><button>10%</button></li>
+            <li><button>15%</button></li>
+            <li><button>25%</button></li>
+            <li><button>50%</button></li>
+            <li><input type="number" placeholder="%"></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>NUmber of People</h2>
+          <input type="number">
+        </div>
+      </div>
+
+      <div class="output">
+        <div class="results">
+          <div>
+            <h2>Tip Amount</h2>
+            <span>/ person</span>
+            <span>$0.00</span>
+          </div>
+          <div>
+            <h2>Total</h2>
+            <span>/ person</span>
+            <span>$0.00</span>
+          </div>
+        </div>
+
+        <div class="reset">
+          <button>Reset</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
