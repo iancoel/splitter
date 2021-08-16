@@ -22,9 +22,11 @@
 
     <div class="content">
       <div class="input">
+
         <div class="bill">
           <h2>Bill</h2>
-          <input type="number" placeholder="$" step="0.01">
+          <input type="number">
+          <img src="images/icon-dollar.svg" alt="Dollar icon">
         </div>
 
         <div class="tip">
@@ -35,27 +37,28 @@
             <li><button>15%</button></li>
             <li><button>25%</button></li>
             <li><button>50%</button></li>
-            <li><input type="number" placeholder="%"></li>
+            <li><input type="number" placeholder="%" max="100" min="0" step="5"></li>
           </ul>
         </div>
 
-        <div>
-          <h2>NUmber of People</h2>
+        <div class="people">
+          <h2>Number of People</h2>
           <input type="number">
+          <img src="images/icon-person.svg" alt="Person icon">
         </div>
       </div>
 
       <div class="output">
         <div class="results">
-          <div>
+          <div class="value-grid">
             <h2>Tip Amount</h2>
-            <span>/ person</span>
-            <span>$0.00</span>
+            <span class="person-span">/ person</span>
+            <span class="value-span">$0.00</span>
           </div>
-          <div>
+          <div class="value-grid">
             <h2>Total</h2>
-            <span>/ person</span>
-            <span>$0.00</span>
+            <span class="person-span">/ person</span>
+            <span class="value-span">$0.00</span>
           </div>
         </div>
 
