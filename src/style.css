@@ -291,7 +291,7 @@ body {
 @media (max-width: 925px) {
   .container {
     flex-direction: column;
-    height: 120vh;
+    height: 140vh;
     overflow: hidden;
   }
 
@@ -321,5 +321,13 @@ body {
 
   .content .output .reset {
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 414px) {
+  .container {
+    flex-direction: column;
+    height: 180vh;
+    overflow: hidden;
   }
 }
