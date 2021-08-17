@@ -161,6 +161,11 @@ body {
   cursor: pointer;
 }
 
+.content .input .tip ul li button.active {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
 .content .input .tip ul li button:hover {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);

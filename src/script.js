@@ -16,6 +16,7 @@ function toggleTipClasses(event) {
     tipOption.classList.remove('active');
   })
   event.target.classList.add('active');
+  changeTip();
 }
 
 tipOptions.forEach((tipOption) => {
@@ -23,7 +24,10 @@ tipOptions.forEach((tipOption) => {
 })
 
 // Get tip value from innerHTML by removing %
-const selectedTipValue = (+document.querySelector(".active").innerHTML.replace('%', '') / 100);
+let selectedTipValue = 0;
+function changeTip () {
+  selectedTipValue = (document.querySelector(".active").innerHTML.replace('%', '') / 100);
+}
 
 // Get number of people as a number
 const peopleInput = document.querySelector('#people');
@@ -34,3 +38,35 @@ function updatePeopleValue() {
   numberOfPeople = +this.value;
 }
 
+// Get output elements
+const tipResultField = document.querySelector('#tip-result');
+const totalResultField = document.querySelector('#total-result');
+
+
+// Update tip and total fields
+function updateFields() {
+  if (billValue && numberOfPeople) {
+    // Calc
+    let tipResult = 0;
+    let totalResult = 0;
+    if(!selectedTipValue) {
+      tipResult = 0;
+      totalResult = (billValue / numberOfPeople).toFixed(2);
+    } else {
+    tipResult = (billValue * selectedTipValue / numberOfPeople).toFixed(2);
+    totalResult = ((billValue + (billValue * selectedTipValue)) / numberOfPeople).toFixed(2);
+    }
+
+    tipResultField.innerHTML = `$${tipResult}`;
+    totalResultField.innerHTML = `$${totalResult}`; 
+  }
+}
+
+// //Event listeners to update fields
+billInput.addEventListener('change', updateFields);
+
+tipOptions.forEach((tipOption) => {
+  tipOption.addEventListener('click', updateFields);
+});
+
+peopleInput.addEventListener('change', updateFields);
