@@ -287,3 +287,38 @@ body {
 .content .output .reset button:hover {
   color: var(--very-dark-cyan);
 }
+
+@media (max-width: 925px) {
+  .container {
+    flex-direction: column;
+    height: 180vh;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: auto;
+  }
+
+  .content .output {
+    padding: 4rem 0;
+  }
+
+  .content .results .value-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content .output .value-grid:first-child {
+    margin-bottom: 3rem;
+  }
+
+  .content .output .person-span {
+    margin-top: 10px;
+  }
+
+  .content .output .reset {
+    margin-top: 40px;
+  }
+}
