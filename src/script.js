@@ -89,3 +89,18 @@ tipOptions.forEach((tipOption) => {
 });
 
 peopleInput.addEventListener('change', updateFields);
+
+// Reset button
+const resetButton = document.querySelector(".reset button");
+
+function resetParameters() {
+  billInput.value = 0;
+  removeActiveClass();
+  setCustom0();
+  peopleInput.value = 0;
+  numberOfPeople = 0;
+  tipResultField.innerHTML = '$0.00';
+  totalResultField.innerHTML = '$0.00';
+};
+
+resetButton.addEventListener('click', resetParameters);
