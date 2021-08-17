@@ -159,6 +159,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .content .input .tip ul li button.active {
@@ -282,6 +283,7 @@ body {
   font-weight: bold;
   color: var(--white);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .content .output .reset button:hover {
