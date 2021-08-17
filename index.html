@@ -25,7 +25,7 @@
         <form action=""></form>
         <div class="bill">
           <h2>Bill</h2>
-          <input type="number" id="bill-value" min="0">
+          <input type="number" id="bill-value" min="0" value="0">
           <img src="images/icon-dollar.svg" alt="Dollar icon">
         </div>
 
@@ -37,13 +37,13 @@
             <li><button>15%</button></li>
             <li><button>25%</button></li>
             <li><button>50%</button></li>
-            <li><input type="number" placeholder="%" max="100" min="0" step="5"></li>
+            <li><input id="custom-tip" type="number" placeholder="%" max="100" min="0" step="5"></li>
           </ul>
         </div>
 
         <div class="people">
           <h2>Number of People</h2>
-          <input type="number" id="people" min="0" max="100">
+          <input type="number" id="people" min="1" max="100" value="0">
           <img src="images/icon-person.svg" alt="Person icon">
         </div>
       </div>
